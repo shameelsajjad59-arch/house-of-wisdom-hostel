@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>House of Wisdom | Rawalpindi</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f7f3ea;
+    color: #222;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    background: rgba(31, 23, 49, 0.97);
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+
+    padding: 12px 6%;
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+}
+
+.brand img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+
+    background: white;
+    padding: 4px;
+
+    border-radius: 50%;
+}
+
+.brand-text h2 {
+    color: #f1c96b;
+    font-size: 21px;
+}
+
+.brand-text span {
+    color: #ddd;
+    font-size: 12px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f1c96b;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 88vh;
+
+    background:
+        linear-gradient(
+            rgba(30,22,50,0.67),
+            rgba(30,22,50,0.80)
+        ),
+        url("hostel.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+    color: white;
+}
+
+.hero-logo {
+    width: 125px;
+    height: 125px;
+
+    object-fit: contain;
+
+    margin: 0 auto 25px;
+
+    background: white;
+    padding: 8px;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 35px rgba(241,201,107,0.55);
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 78px);
+
+    color: #f1c96b;
+
+    margin-bottom: 10px;
+
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    font-size: clamp(20px, 3vw, 32px);
+
+    font-weight: normal;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 760px;
+
+    margin: auto;
+
+    color: #eee;
+
+    font-size: 18px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 13px 30px;
+
+    background: #f1c96b;
+    color: #261b36;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+    padding: 85px 7%;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    color: #302044;
+
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+.line {
+    width: 75px;
+    height: 4px;
+
+    background: #c69b3c;
+
+    margin: 15px auto;
+
+    border-radius: 10px;
+}
+
+.section-title p {
+    max-width: 750px;
+
+    margin: auto;
+
+    color: #666;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: white;
+}
+
+.about-container {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 55px;
+
+    align-items: center;
+}
+
+.about-image {
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.18);
+}
+
+.about-image img {
+    width: 100%;
+    height: 420px;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-text h3 {
+    color: #302044;
+
+    font-size: 30px;
+
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    color: #555;
+
+    margin-bottom: 15px;
+}
+
+.highlight {
+    border-left: 4px solid #c69b3c;
+
+    padding: 15px 20px;
+
+    background: #f8f3e7;
+
+    margin-top: 20px;
+
+    color: #453651;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   MISSION
+========================= */
+
+.mission {
+    background: #302044;
+
+    color: white;
+}
+
+.mission .section-title h2 {
+    color: #f1c96b;
+}
+
+.mission .section-title p {
+    color: #ddd;
+}
+
+.mission-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.mission-card {
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border-radius: 18px;
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+    transition: 0.3s;
+}
+
+.mission-card:hover {
+    transform: translateY(-8px);
+
+    background:
+        rgba(255,255,255,0.14);
+}
+
+.mission-icon {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.mission-card h3 {
+    color: #f1c96b;
+
+    margin-bottom: 10px;
+}
+
+.mission-card p {
+    color: #ddd;
+}
+
+
+/* =========================
+   LEADERSHIP
+========================= */
+
+.leadership {
+    background: #f7f3ea;
+}
+
+.leaders {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.leader-card {
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.12);
+
+    transition: 0.3s;
+}
+
+.leader-card:hover {
+    transform: translateY(-8px);
+}
+
+.leader-card img {
+    width: 100%;
+    height: 330px;
+
+    object-fit: cover;
+
+    object-position: center top;
+}
+
+.leader-info {
+    padding: 22px;
+}
+
+.leader-info h3 {
+    color: #302044;
+
+    margin-bottom: 7px;
+}
+
+.leader-info span {
+    color: #b18631;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   HOSTEL LIFE
+========================= */
+
+.life {
+    background: white;
+}
+
+.life-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 25px;
+}
+
+.life-card {
+    padding: 30px;
+
+    background: #f8f4eb;
+
+    border-radius: 18px;
+
+    border-top:
+        4px solid #c69b3c;
+}
+
+.life-card h3 {
+    color: #302044;
+
+    margin-bottom: 10px;
+}
+
+.life-card p {
+    color: #555;
+}
+
+
+/* =========================
+   PRAYER
+========================= */
+
+.prayer {
+    background:
+        linear-gradient(
+            rgba(48,32,68,0.95),
+            rgba(48,32,68,0.95)
+        );
+
+    color: white;
+
+    text-align: center;
+}
+
+.prayer-content {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.cross {
+    color: #f1c96b;
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.prayer h2 {
+    color: #f1c96b;
+
+    font-size: 38px;
+
+    margin-bottom: 20px;
+}
+
+.prayer p {
+    color: #ddd;
+
+    font-size: 18px;
+}
+
+.mass-box {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border:
+        1px solid rgba(241,201,107,0.5);
+
+    border-radius: 15px;
+
+    background:
+        rgba(255,255,255,0.06);
+}
+
+.mass-box strong {
+    color: #f1c96b;
+}
+
+
+/* =========================
+   TIMETABLE
+========================= */
+
+.timetable {
+    background: #f7f3ea;
+}
+
+.table-container {
+    max-width: 900px;
+
+    margin: auto;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.1);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+th {
+    background: #302044;
+
+    color: white;
+
+    padding: 17px;
+
+    text-align: left;
+}
+
+td {
+    padding: 15px;
+
+    border-bottom:
+        1px solid #eee;
+}
+
+tr:hover td {
+    background: #faf6ed;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    background: white;
+}
+
+.gallery-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.gallery-item {
+    height: 240px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.12);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.location {
+    background: #302044;
+
+    color: white;
+
+    text-align: center;
+}
+
+.location .section-title h2 {
+    color: #f1c96b;
+}
+
+.location .section-title p {
+    color: #ddd;
+}
+
+.address-box {
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    border:
+        1px solid rgba(241,201,107,0.4);
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,0.06);
+}
+
+.address-box h3 {
+    color: #f1c96b;
+
+    margin-bottom: 15px;
+}
+
+.address-box p {
+    color: #ddd;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #191222;
+
+    color: white;
+
+    padding:
+        45px 7% 25px;
+}
+
+.footer-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 35px;
+}
+
+footer h3 {
+    color: #f1c96b;
+
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #bbb;
+
+    font-size: 14px;
+}
+
+.footer-bottom {
+    text-align: center;
+
+    border-top:
+        1px solid #332b3d;
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .leaders {
+        grid-template-columns: 1fr;
+
+        max-width: 450px;
+    }
+
+    .life-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero-logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 280px;
+    }
+
+    .brand-text h2 {
+        font-size: 18px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="navbar">
+
+<a href="#home" class="brand">
+
+<img src="logo.png" alt="House of Wisdom Logo">
+
+<div class="brand-text">
+
+<h2>House of Wisdom</h2>
+
+<span>Christian Students Hostel</span>
+
+</div>
+
+</a>
+
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#mission">Mission</a>
+
+<a href="#leadership">Leadership</a>
+
+<a href="#life">Hostel Life</a>
+
+<a href="#prayer">Prayer</a>
+
+<a href="#timetable">Routine</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#location">Location</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<img
+src="logo.png"
+alt="House of Wisdom Logo"
+class="hero-logo"
+>
+
+<h1>House of Wisdom</h1>
+
+<h2>Forming Christian Leaders</h2>
+
+<p>
+A Christian students hostel dedicated to supporting
+young people in their studies, spiritual growth,
+discipline and leadership formation.
+</p>
+
+<a href="#about" class="hero-button">
+Discover Our Hostel
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+<div class="section-title">
+
+<h2>About House of Wisdom</h2>
+
+<div class="line"></div>
+
+<p>
+A place where education, faith, discipline and community
+come together.
+</p>
+
+</div>
+
+
+<div class="about-container">
+
+<div class="about-image">
+
+<img
+src="hostel.jpg"
+alt="House of Wisdom Hostel"
+>
+
+</div>
+
+
+<div class="about-text">
+
+<h3>Growing Through Faith & Education</h3>
+
+<p>
+House of Wisdom provides a supportive environment
+for Christian students studying in colleges and
+universities.
+</p>
+
+<p>
+The hostel encourages students to develop their
+academic abilities while also growing in faith,
+responsibility, discipline and leadership.
+</p>
+
+<p>
+Through prayer, community life, study and a
+structured daily routine, students are encouraged
+to prepare themselves for service and leadership.
+</p>
+
+<div class="highlight">
+
+"Forming Christian leaders who can serve God,
+the Church and society."
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     MISSION
+========================= -->
+
+<section class="mission" id="mission">
+
+<div class="section-title">
+
+<h2>Our Mission</h2>
+
+<div class="line"></div>
+
+<p>
+Our life at House of Wisdom is built around faith,
+education and responsible leadership.
+</p>
+
+</div>
+
+
+<div class="mission-grid">
+
+
+<div class="mission-card">
+
+<div class="mission-icon">✝</div>
+
+<h3>Faith</h3>
+
+<p>
+Encouraging students to grow in their relationship
+with God through prayer and Christian community.
+</p>
+
+</div>
+
+
+<div class="mission-card">
+
+<div class="mission-icon">📚</div>
+
+<h3>Education</h3>
+
+<p>
+Supporting Christian students in their college
+and university studies.
+</p>
+
+</div>
+
+
+<div class="mission-card">
+
+<div class="mission-icon">⭐</div>
+
+<h3>Leadership</h3>
+
+<p>
+Preparing young Christian students to become
+responsible and faithful leaders.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     LEADERSHIP
+========================= -->
+
+<section class="leadership" id="leadership">
+
+<div class="section-title">
+
+<h2>Our Leadership</h2>
+
+<div class="line"></div>
+
+<p>
+The people serving and guiding the House of Wisdom community.
+</p>
+
+</div>
+
+
+<div class="leaders">
+
+
+<div class="leader-card">
+
+<img
+src="archbishop-joseph.jpg"
+alt="Archbishop Dr. Joseph Arshad"
+>
+
+<div class="leader-info">
+
+<h3>Archbishop Dr. Joseph Arshad</h3>
+
+<span>Main Director</span>
+
+</div>
+
+</div>
+
+
+
+<div class="leader-card">
+
+<img
+src="director-david.jpg"
+alt="Rev. Fr. David John"
+>
+
+<div class="leader-info">
+
+<h3>Rev. Fr. David John</h3>
+
+<span>Hostel Director</span>
+
+</div>
+
+</div>
+
+
+
+<div class="leader-card">
+
+<img
+src="rabeel-aslam.jpg"
+alt="Br. Rabeel Aslam"
+>
+
+<div class="leader-info">
+
+<h3>Br. Rabeel Aslam</h3>
+
+<span>Hostel Incharge</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     HOSTEL LIFE
+========================= -->
+
+<section class="life" id="life">
+
+<div class="section-title">
+
+<h2>Hostel Life</h2>
+
+<div class="line"></div>
+
+<p>
+A balanced environment for study, prayer, discipline
+and community.
+</p>
+
+</div>
+
+
+<div class="life-container">
+
+
+<div class="life-card">
+
+<h3>📚 Academic Life</h3>
+
+<p>
+Students are encouraged to take their studies
+seriously and maintain a disciplined academic routine.
+</p>
+
+</div>
+
+
+<div class="life-card">
+
+<h3>✝ Spiritual Life</h3>
+
+<p>
+Prayer and Christian formation are an important
+part of daily hostel life.
+</p>
+
+</div>
+
+
+<div class="life-card">
+
+<h3>🤝 Community Life</h3>
+
+<p>
+Students live together as a community, learning
+cooperation, responsibility and mutual respect.
+</p>
+
+</div>
+
+
+<div class="life-card">
+
+<h3>🌟 Leadership Formation</h3>
+
+<p>
+Students are encouraged to develop qualities
+needed for responsible Christian leadership.
+</p>
+
+</div>
+
+
+<div class="life-card">
+
+<h3>🕊️ Daily Discipline</h3>
+
+<p>
+A structured timetable helps students balance
+study, prayer, rest and community responsibilities.
+</p>
+
+</div>
+
+
+<div class="life-card">
+
+<h3>🏠 A Home Away From Home</h3>
+
+<p>
+House of Wisdom seeks to provide Christian students
+with a supportive and welcoming environment.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PRAYER
+========================= -->
+
+<section class="prayer" id="prayer">
+
+<div class="prayer-content">
+
+<div class="cross">✝</div>
+
+<h2>Prayer & Spiritual Life</h2>
+
+<p>
+Prayer is an important part of life at House of Wisdom.
+Students come together in prayer and spiritual formation
+as part of their daily routine.
+</p>
+
+
+<div class="mass-box">
+
+<p>
+<strong>Morning Prayer</strong>
+— Every morning
+</p>
+
+<p>
+<strong>Evening Prayer</strong>
+— Every evening
+</p>
+
+<p>
+<strong>Holy Mass</strong>
+— Every Thursday
+</p>
+
+<p>
+Led by <strong>Rev. Fr. Jacob Dogra</strong>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ROUTINE
+========================= -->
+
+<section class="timetable" id="timetable">
+
+<div class="section-title">
+
+<h2>Daily Routine</h2>
+
+<div class="line"></div>
+
+<p>
+A structured routine helps students maintain balance
+between prayer, study and daily responsibilities.
+</p>
+
+</div>
+
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Activity</th>
+
+<th>Time</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+<tr>
+
+<td>Morning Prayer</td>
+
+<td>Morning</td>
+
+</tr>
+
+
+<tr>
+
+<td>Study / College</td>
+
+<td>Daytime</td>
+
+</tr>
+
+
+<tr>
+
+<td>Study Time</td>
+
+<td>Evening</td>
+
+</tr>
+
+
+<tr>
+
+<td>Evening Prayer</td>
+
+<td>Evening</td>
+
+</tr>
+
+
+<tr>
+
+<td>Holy Mass</td>
+
+<td>Every Thursday</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="gallery" id="gallery">
+
+<div class="section-title">
+
+<h2>Our Gallery</h2>
+
+<div class="line"></div>
+
+<p>
+A glimpse of the people and place behind House of Wisdom.
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item">
+
+<img
+src="hostel.jpg"
+alt="House of Wisdom Hostel"
+>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="archbishop-joseph.jpg"
+alt="Archbishop Dr. Joseph Arshad"
+>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="director-david.jpg"
+alt="Rev. Fr. David John"
+>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="rabeel-aslam.jpg"
+alt="Br. Rabeel Aslam"
+>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     LOCATION
+========================= -->
+
+<section class="location" id="location">
+
+<div class="section-title">
+
+<h2>Our Location</h2>
+
+<div class="line"></div>
+
+<p>
+House of Wisdom is located in Rawalpindi.
+</p>
+
+</div>
+
+
+<div class="address-box">
+
+<h3>House of Wisdom</h3>
+
+<p>
+St. Mary's Academy<br>
+Tulsa Road<br>
+New Lalazaar<br>
+Rawalpindi, Pakistan
+</p>
+
+<br>
+
+<p>
+Under the Rawalpindi and Islamabad Diocese
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer-container">
+
+
+<div>
+
+<h3>House of Wisdom</h3>
+
+<p>
+A Christian students hostel committed to
+education, faith, discipline and leadership formation.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Leadership</h3>
+
+<p>
+Archbishop Dr. Joseph Arshad<br>
+Rev. Fr. David John<br>
+Br. Rabeel Aslam
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Location</h3>
+
+<p>
+St. Mary's Academy<br>
+Tulsa Road<br>
+New Lalazaar<br>
+Rawalpindi, Pakistan
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 House of Wisdom. All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
